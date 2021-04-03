@@ -1,0 +1,41 @@
+.banner {
+    position: relative;
+    padding: 50px 30px;
+    background-color: $color_1BAABC;
+    border-radius: 16px;
+    box-shadow: 0 20px 36px 0 rgba(97, 188, 200, 0.37);
+
+    &__left {
+        max-width: 130px;
+        position: absolute;
+        left: 70px;
+        top: 50%;
+        @include transform(translateY(-50%))
+    }
+
+    &__right {
+        max-width: 260px;
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+    }
+
+    &__content {
+        max-width: 590px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $color_fff;
+        text-align: center
+    }
+
+    &__heading {
+        @include Circular-Bold;
+        font-size: 56px;
+        margin-bottom: 22px;
+    }
+
+    &__des {
+        font-size: 18px;
+        margin-bottom: 22px;
+    }
+}

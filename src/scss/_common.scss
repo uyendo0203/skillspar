@@ -1,0 +1,404 @@
+body {
+    font-family: $CircularStd-Book;
+    font-size: 16px;
+    padding: 0;
+}
+
+a {
+    outline: none;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.container {
+    @media (min-width: 1200px) {
+        max-width: 1170px !important;
+    }
+}
+
+xmp {
+    line-height: normal;
+    margin: 0;
+    text-align: left;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn {
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 190px;
+    @include transition(all 0.3s ease);
+
+    @media(max-width:1024px) {
+        padding: 8px 10px;
+        min-width: auto;
+        font-size: 14px;
+    }
+
+    &:hover {
+        color: $color_fff;
+        border-radius: 50px;
+    }
+
+    &-1BAABC {
+        @include Circular-Medium;
+        background-color: $color_1BAABC;
+        color: $color_fff;
+
+        &_Light {
+            background-color: #1baabc26;
+            color: $color_1BAABC;
+
+            &:hover {
+                color: $color_1BAABC;
+                border-color: $color_1BAABC;
+            }
+        }
+    }
+
+    &-light {
+        background-color: $color_1BAABC;
+        border: 1px solid $color_fff;
+        color: $color_fff;
+
+        &:hover {
+            background-color: transparent
+        }
+    }
+}
+
+.header {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    @include transform(translateX(-50%));
+    position: absolute;
+    width: 100%;
+    max-width: 1540px;
+    top: 15px;
+    left: 50%;
+    height: 55px;
+    padding: 0 20px;
+    z-index: 1;
+
+    @media(max-width:1024px) {
+        top: 0;
+    }
+
+    &-logo {
+        max-width: 150px;
+        display: inline-block;
+    }
+
+    &-menu {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        margin-left: auto;
+
+        &__nav {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include Circular-Medium;
+            padding: 0;
+            margin: 0;
+            @include transition(all 0.2s ease);
+
+            @media(max-width:1024px) {
+                @include flexbox;
+                @include flex-direction(column);
+                @include transition(all 0.2s ease);
+                position: fixed;
+                height: 100vh;
+                background: #ddf2f5;
+                top: 0;
+                right: 0;
+                margin: 0;
+                opacity: 0;
+                z-index: -1;
+                padding-top: 50px;
+            }
+
+            &.active {
+                z-index: 9;
+                opacity: 1;
+                width: 250px;
+
+                li {
+                    display: block;
+                }
+            }
+
+            li {
+                @include flexbox;
+                @include align-items(center);
+                list-style: none;
+                margin: 0 25px;
+
+                @media(max-width:1024px) {
+                    margin: 8px 25px;
+                    display: none;
+                }
+
+                &.active,
+                &:hover {
+                    a {
+                        color: $color_1BAABC;
+                    }
+                }
+            }
+
+            .btn:hover {
+                color: $color_fff;
+            }
+
+            a {
+                color: $color_173A65;
+                text-decoration: none;
+            }
+        }
+
+        &__mb {
+            display: none;
+            z-index: 1;
+            cursor: pointer;
+
+            @media(max-width:1024px) {
+                @include flexbox;
+                @include align-items(center);
+            }
+
+            &.active {
+                @media(max-width:1024px) {
+                    z-index: 10;
+                }
+            }
+
+            .lines {
+                @include flexbox;
+                @include flex-direction(column);
+
+                @media (max-width: 1024px) {
+                    margin-top: 0.2vw;
+                    height: 16px;
+                }
+
+                .line {
+                    background-color: $color_173A65;
+                    transition: all 0.2s ease;
+                    height: 2px;
+                    width: 18px;
+                    margin-bottom: 3px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &.active {
+                .line_2 {
+                    display: none;
+                }
+
+                .line_3 {
+                    @include transform(rotate(-45deg) translateY(-0.156vw) translateX(0.052vw));
+                    // @include transform(rotate(-45deg) translateY(-3px) translateX(1px));
+                }
+
+                .line_1 {
+                    @include transform(rotate(45deg) translateY(0.104vw) translateX(0.052vw));
+
+                    // @include transform(rotate(45deg) translateY(2px) translateX(1px));
+                    @media (max-width: 1024px) {
+                        @include transform(rotate(45deg) translateY(3px) translateX(3px));
+                    }
+                }
+            }
+
+            .text {
+                padding-right: 8px;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+
+        .btn {
+            color: $color_fff;
+
+            @media(max-width:1024px) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-bottom: 40px;
+
+    .col-12 {
+        @media(max-width:767px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__heading {
+        @include Circular-Bold;
+        color: #173A65;
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    &__menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 15px;
+
+            @media(max-width:767px) {
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: #0E1A28;
+            }
+
+        }
+    }
+
+    &__newsletter-text {
+        color: #0E1A28;
+        margin-bottom: 25px;
+
+    }
+}
+
+.modal {
+    padding: 0 !important;
+}
+
+.main_wapper {
+
+    @media (max-width: 1024px) {
+        overflow: hidden;
+    }
+}
+
+.loading {
+    background: #00000080;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.3s ease);
+    @include flex_center;
+    @include transform(translate(-50%, -50%));
+
+    &.active {
+        z-index: 999;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        width: 12vw;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+
+        @media (max-width: 1024px) {
+            width: 30vw;
+        }
+    }
+}
+
+.newsletter-form {
+    @include flexbox;
+    @include align-items(center);
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 32px 84px 0 rgba(14, 86, 124, 0.11);
+    padding: 5px;
+    padding-left: 25px;
+
+    .icon {
+        max-width: 20px;
+    }
+
+    .form-group {
+        @include flexbox;
+        @include align-items(center);
+        margin: 0;
+    }
+
+    .form-control {
+        border: none;
+        border-radius: 0;
+
+        @mixin placeholderInputStyles {
+            color: #0d192640;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include placeholderInputStyles
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include placeholderInputStyles
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include placeholderInputStyles
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include placeholderInputStyles
+        }
+
+
+        &:hover,
+        :focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .btn {
+        width: 160px;
+        min-width: auto;
+    }
+}

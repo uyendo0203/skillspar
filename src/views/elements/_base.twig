@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page_title }}</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/logo.png">
+</head>
+
+<body>
+
+    <main class="main_wapper">
+        {% include "./_header.twig" %}
+        {% block content %}{% endblock %}
+        {% include "./_footer.twig" %}
+    </main>
+
+    <!-- libs  ---------------------------------------------------------------->
+    <script src="./assets/libs/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/libs/slick/slick.min.js"></script>
+    <script src="./assets/libs/wow.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

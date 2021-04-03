@@ -1,0 +1,105 @@
+/*CircularStd*/
+
+$CircularStd-Black: "CircularStd-Black";
+$CircularStd-Bold: "CircularStd-Bold";
+$CircularStd-Book: "CircularStd-Book";
+$CircularStd-Medium: "CircularStd-Medium";
+
+@font-face {
+    font-family: 'CircularStd-Black';
+    src: url('../assets/fonts/CircularStd-Black/CircularStd-Black.eot');
+    src: url('../assets/fonts/CircularStd-Black/CircularStd-Black.eot') format('embedded-opentype'),
+        url('../assets/fonts/CircularStd-Black/CircularStd-Black.woff2') format('woff2'),
+        url('../assets/fonts/CircularStd-Black/CircularStd-Black.woff') format('woff'),
+        url('../assets/fonts/CircularStd-Black/CircularStd-Black.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'CircularStd-Medium';
+    src: url('../assets/fonts/CircularStd-Medium/CircularStd-Medium.eot');
+    src: url('../assets/fonts/CircularStd-Medium/CircularStd-Medium.eot') format('embedded-opentype'),
+        url('../assets/fonts/CircularStd-Medium/CircularStd-Medium.woff2') format('woff2'),
+        url('../assets/fonts/CircularStd-Medium/CircularStd-Medium.woff') format('woff'),
+        url('../assets/fonts/CircularStd-Medium/CircularStd-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url('../assets/fonts/CircularStd-Book/CircularStd-Book.eot');
+    src: url('../assets/fonts/CircularStd-Book/CircularStd-Book.eot') format('embedded-opentype'),
+        url('../assets/fonts/CircularStd-Book/CircularStd-Book.woff2') format('woff2'),
+        url('../assets/fonts/CircularStd-Book/CircularStd-Book.woff') format('woff'),
+        url('../assets/fonts/CircularStd-Book/CircularStd-Book.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.ttf') format('truetype'),
+}
+
+
+/*SVN-Gilroy*/
+$SVN-Gilroy-Black: "SVN-Gilroy-Black";
+$SVN-Gilroy-Bold: "SVN-Gilroy-Bold";
+$SVN-Gilroy-Light: "SVN-Gilroy-Light";
+$SVN-Gilroy-Medium: "SVN-Gilroy-Medium";
+$SVN-Gilroy-Regular: "SVN-Gilroy-Regular";
+$SVN-Gilroy-SemiBold: "SVN-Gilroy-SemiBold";
+
+@font-face {
+    font-family: 'SVN-Gilroy-Black';
+    src: url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Black/SVNGilroyBlack.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-Bold';
+    src: url('../assets/fonts/SVN-Gilroy-Bold/SVNGilroyBold.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Bold/SVNGilroyBold.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Bold/SVNGilroyBold.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Bold/SVNGilroyBold.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Bold/SVNGilroyBold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-Light';
+    src: url('../assets/fonts/SVN-Gilroy-Light/SVNGilroyLight.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Light/SVNGilroyLight.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Light/SVNGilroyLight.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Light/SVNGilroyLight.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Light/SVNGilroyLight.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-Medium';
+    src: url('../assets/fonts/SVN-Gilroy-Medium/SVNGilroyMedium.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Medium/SVNGilroyMedium.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Medium/SVNGilroyMedium.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Medium/SVNGilroyMedium.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Medium/SVNGilroyMedium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-Regular';
+    src: url('../assets/fonts/SVN-Gilroy-Regular/SVNGilroyRegular.eot');
+    src: url('../assets/fonts/SVN-Gilroy-Regular/SVNGilroyRegular.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-Regular/SVNGilroyRegular.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-Regular/SVNGilroyRegular.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-Regular/SVNGilroyRegular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-SemiBold';
+    src: url('../assets/fonts/SVN-Gilroy-SemiBold/SVNGilroySemiBold.eot');
+    src: url('../assets/fonts/SVN-Gilroy-SemiBold/SVNGilroySemiBold.eot') format('embedded-opentype'),
+        url('../assets/fonts/SVN-Gilroy-SemiBold/SVNGilroySemiBold.woff2') format('woff2'),
+        url('../assets/fonts/SVN-Gilroy-SemiBold/SVNGilroySemiBold.woff') format('woff'),
+        url('../assets/fonts/SVN-Gilroy-SemiBold/SVNGilroySemiBold.ttf') format('truetype'),
+}
