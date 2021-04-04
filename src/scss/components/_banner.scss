@@ -3,21 +3,47 @@
     padding: 50px 30px;
     background-color: $color_1BAABC;
     border-radius: 16px;
-    box-shadow: 0 20px 36px 0 rgba(97, 188, 200, 0.37);
+    @include box-shadow(0 20px 36px 0 rgba(97, 188, 200, 0.37));
+
+    @media(max-width:767px) {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 
     &__left {
-        max-width: 130px;
+        // width: 130px;
+        // left: 70px;
+        width: 6.771vw;
+        left: 3.646vw;
         position: absolute;
-        left: 70px;
         top: 50%;
-        @include transform(translateY(-50%))
+        @include transform(translateY(-50%));
+
+        @media(max-width:767px) {
+            @include transform(none);
+            position: static;
+            width: 100%;
+            max-width: 40%;
+            margin: 0 auto;
+            padding-top: 30px;
+
+        }
     }
 
     &__right {
-        max-width: 260px;
+        // max-width: 260px;
+        // right: 30px;
+        width: 13.542vw;
+        right: 1.563vw;
         position: absolute;
-        right: 30px;
         bottom: 0;
+
+        @media(max-width:767px) {
+            position: static;
+            width: 100%;
+            max-width: 50%;
+            margin: 20px auto 2px;
+        }
     }
 
     &__content {
@@ -30,12 +56,32 @@
 
     &__heading {
         @include Circular-Bold;
-        font-size: 56px;
-        margin-bottom: 22px;
+        // font-size: 56px;
+        // margin-bottom: 22px;
+        font-size: 2.917vw;
+        margin-bottom: 1.146vw;
+
+        @media(max-width:767px) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
     }
 
     &__des {
-        font-size: 18px;
-        margin-bottom: 22px;
+        // font-size: 18px;
+        // margin-bottom: 22px;
+        font-size: 0.938vw;
+        margin-bottom: 1.146vw;
+
+        @media(max-width:767px) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .btn {
+        @media(max-width:767px) {
+            min-width: 30%
+        }
     }
 }

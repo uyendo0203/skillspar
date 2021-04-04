@@ -3,8 +3,40 @@
 
 {% block content %}
 
-<div class="register">
-    Register
+{% set headerClassName = "'header'" %}
+{% include "../elements/_header.twig" %}
+
+<div class="register account">
+    <div class="account--container">
+        <div class="account--title">Register</div>
+        <div class="account--wrap">
+            <div class="form-group">
+                <input placeholder="Email*" type="text" class="form-control">
+                <p class="text-danger">error message</p>
+            </div>
+            <div class="form-group">
+                <input placeholder="Password*" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <input placeholder="Confirm Password*" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <input placeholder="Your Name" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <select class="form-control form-select" name="">
+                    <option value="" selected>Country </option>
+                    <option value="1">Country 1</option>
+                    <option value="2">Country 2</option>
+                    <option value="3">Country 3</option>
+                </select>
+            </div>
+            <button class="btn btn-1BAABC">Create an Account</button>
+        </div>
+    </div>
+    <div class="account--create_link">
+        Do you have an account? <a href="#" class="link">Login</a>
+    </div>
 </div>
 
 {% endblock %}

@@ -90,21 +90,38 @@ button {
 }
 
 .header {
-    @include flexbox;
-    @include align-items(center);
-    @include flex-wrap(wrap);
-    @include transform(translateX(-50%));
-    position: absolute;
-    width: 100%;
-    max-width: 1540px;
-    top: 15px;
-    left: 50%;
-    height: 55px;
-    padding: 0 20px;
-    z-index: 1;
+    @include box-shadow(0 5px 15px #0000000d);
+    text-align: center;
+
+    &.home {
+        // position: absolute;
+        // top: 15px;
+        // left: 0;
+        box-shadow: none;
+        z-index: 1;
+        width: 100%;
+        background-color: $color_1BAABC_light;
+
+        .header-container {}
+    }
 
     @media(max-width:1024px) {
         top: 0;
+    }
+
+    &-container {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        width: 100%;
+        max-width: 1540px;
+        padding: 15px 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media(max-width:1024px) {
+            padding: 15px;
+        }
     }
 
     &-logo {
@@ -129,6 +146,7 @@ button {
             @media(max-width:1024px) {
                 @include flexbox;
                 @include flex-direction(column);
+                @include align-items(flex-start);
                 @include transition(all 0.2s ease);
                 position: fixed;
                 height: 100vh;
@@ -162,10 +180,33 @@ button {
                     display: none;
                 }
 
-                &.active,
-                &:hover {
+                a:hover {
+                    color: $color_1BAABC;
+                }
+
+                &.active {
+                    @media(max-width:1024px) {
+                        padding-bottom: 8px;
+                    }
+
                     a {
                         color: $color_1BAABC;
+                    }
+
+                    position: relative;
+
+                    &::before {
+                        background-color: $color_1BAABC;
+                        position: absolute;
+                        content: '';
+                        height: 4px;
+                        width: 100%;
+                        bottom: -15px;
+
+                        @media(max-width:1024px) {
+                            height: 3px;
+                            bottom: 0;
+                        }
                     }
                 }
             }
@@ -400,5 +441,68 @@ button {
     .btn {
         width: 160px;
         min-width: auto;
+    }
+}
+
+// form 
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background-color: #F9F9FA;
+    height: 55px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    color: #444648;
+
+    @media(max-width:1024px) {
+        height: 45px;
+    }
+
+    @mixin placeholderInputStyles {
+        color: #44464880;
+    }
+
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        @include placeholderInputStyles
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        @include placeholderInputStyles
+    }
+
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        @include placeholderInputStyles
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        @include placeholderInputStyles
+    }
+}
+
+select.form-control {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-image: url('../assets/images/Chevron-Right.png');
+    background-size: 12px;
+    background-position: right 25px center;
+    background-repeat: no-repeat;
+    color: #444648;
+
+    &.no-select {
+        color: #44464880;
+    }
+
+    option {
+        color: #444648 !important;
     }
 }

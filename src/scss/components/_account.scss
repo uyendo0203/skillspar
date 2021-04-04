@@ -1,0 +1,81 @@
+.account {
+    max-width: 540px;
+    margin: 80px auto 110px auto;
+
+    &--container {
+        @include box-shadow(0 32px 84px 0 rgba(14, 86, 124, 0.11));
+        margin-top: 80px;
+        padding: 30px 50px 40px 50px;
+        border-radius: 4px;
+
+        @media(max-width:1024px) {
+            padding: 30px 20px 40px 20px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &--title {
+        @include Circular-Black;
+        font-size: 48px;
+        color: $color_173A65;
+        text-align: center;
+        margin-bottom: 25px;
+
+        @media(max-width:1024px) {
+            font-size: 40px;
+        }
+    }
+
+    &--wrap {}
+
+    &--forget_password {
+        color: $color_1BAABC;
+        font-size: 14px;
+        text-align: right;
+        display: inline-flex;
+        @include align-items(center);
+
+        .icon {
+            max-width: 15px;
+            margin-right: 12px;
+        }
+
+        .text {
+            line-height: normal;
+            margin-top: 3px;
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $color_1BAABC;
+            text-decoration: none;
+
+            .text {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 15px;
+        font-family: $SVN-Gilroy-SemiBold;
+    }
+
+    &--create_link {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+
+        margin-top: 40px;
+        text-align: center;
+
+        .link {
+            font-family: $SVN-Gilroy-Bold;
+            color: $color_1BAABC;
+        }
+    }
+}

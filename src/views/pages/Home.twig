@@ -3,9 +3,35 @@
 
 {% block content %}
 
+{% set headerClassName = "'header home'" %}
+{% include "../elements/_header.twig" %}
+
 <div class="main_content home-page">
+    <div class="home-slider">
+        <div class="home-slider__wrap">
+            <figure class="img img-1">
+                <img src="../../assets/images/home-slider-1.png" alt="">
+            </figure>
+            <figure class="img img-2">
+                <img src="../../assets/images/home-slider-1.png" alt="">
+            </figure>
+            <figure class="img img-3">
+                <img src="../../assets/images/home-slider-1.png" alt="">
+            </figure>
+        </div>
+        <div class="home-slider__footer">
+            <span>The product is implemented jointly with
+                <img src="../../assets/images/logo_eco.png" alt="">
+            </span>
+        </div>
+    </div>
+
     <div class="container">
         home-page
+
+
+        {% include "../elements/_banner.twig" %}
+
     </div>
 </div>
 

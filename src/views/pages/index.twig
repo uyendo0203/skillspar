@@ -2,11 +2,13 @@
 {% extends "../elements/_base.twig" %}
 
 {% block content %}
+
+{% set headerClassName = "'header'" %}
+{% include "../elements/_header.twig" %}
+
 <div class="container">
-    <div class="menu-page" style="padding-top:150px">
-        <h3>
-            <u>Pages</u>
-        </h3>
+    <div class="menu-page" style="padding-top:50px">
+        <h3>Pages</h3>
         <ul class="menu">
             {% set menu = [
             {link: "Login" },
@@ -24,28 +26,61 @@
             {% endfor %}
         </ul>
 
-        <h3>
-            <u>Components</u>
-        </h3>
+        <h3>Components</h3>
         <div class="card">
 
             <div class="card-body">
-                <h3>Link</h3>
-                <a href="#" class="btn btn-1BAABC">Login/Register</a>
-                <a href="#" class="btn btn-1BAABC_Light">Watch video</a>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Link</h3>
+                        <a href="#" class="btn btn-1BAABC">Login/Register</a>
+                        <a href="#" class="btn btn-1BAABC_Light">Watch video</a>
+                    </div>
+                    <div class="col-6">
+                        <h3>Button</h3>
+                        <button class="btn btn-1BAABC">Login/Register</button>
+                        <button class="btn btn-1BAABC_Light">Watch video</button>
+                    </div>
+                </div>
             </div>
+
             <hr>
+
             <div class="card-body">
-                <h3>Button</h3>
-                <button class="btn btn-1BAABC">Login/Register</button>
-                <a href="#" class="btn btn-1BAABC_Light">Watch video</a>
+                <h3>Form</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <label>input</label>
+                        <div class="form-group">
+                            <input placeholder="Your Name" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label>select</label>
+                        <div class="form-group">
+                            <select class="form-control form-select" name="">
+                                <option value="" selected>Country </option>
+                                <option value="1">Country 1</option>
+                                <option value="2">Country 2</option>
+                                <option value="3">Country 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label>textarea</label>
+                        <div class="form-group">
+                            <textarea name="" class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
+
         <div class="mt-4">
             {% include "../elements/_banner.twig" %}
         </div>
     </div>
-
 </div>
 <style>
     .menu {
